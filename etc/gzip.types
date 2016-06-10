@@ -1,0 +1,17 @@
+gzip_types
+    application/atom+xml
+    application/font-sfnt
+    application/javascript
+    application/json
+    application/rss+xml
+    application/rtf
+    application/soap+xml
+    application/x-font-woff
+    application/xml
+    message/rfc822
+    text/css
+    text/csv
+    text/plain
+    text/tab-separated-values
+    text/xml
+;

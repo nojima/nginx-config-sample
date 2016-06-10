@@ -1,0 +1,17 @@
+server {
+    listen 127.0.0.1:8080;
+    server monitoring.example.com;
+
+    access_log /var/log/nginx/access.log ltsv;
+
+    location / {
+        # serve a static file from filesystem for monitoring.
+        root /var/www/monitoring;
+        index ok.txt;
+    }
+
+    location = /status {
+        # endpoint to see server status.
+        stub_status;
+    }
+}

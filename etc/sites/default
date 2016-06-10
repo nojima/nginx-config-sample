@@ -1,0 +1,28 @@
+server {
+    listen 80 default_server;
+    server_name example.com;
+
+    access_log /var/log/nginx/access.log ltsv;
+
+    location / {
+        # serve static files under /var/www/default.
+        root /var/www/default;
+
+        # ..., or redirect to HTTPS site.
+        # return 301 https://$host$request_uri;
+    }
+}
+
+#server {
+#    listen 443 ssl http2 default_server;
+#    server_name example.com;
+#
+#    access_log /var/log/nginx/access.log ltsv;
+#
+#    ssl_certificate /path/to/certificate;
+#    ssl_certificate_key /path/to/sercret_key;
+#
+#    location / {
+#        root /var/www/default;
+#    }
+#}
