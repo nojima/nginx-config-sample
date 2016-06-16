@@ -1,6 +1,6 @@
 server {
     listen 127.0.0.1:8080;
-    server monitoring.example.com;
+    server_name monitoring.example.com;
 
     access_log /var/log/nginx/access.log ltsv;
 
